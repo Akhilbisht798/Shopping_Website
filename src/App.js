@@ -41,13 +41,16 @@ const App = () => {
         let c = cart;
         if (oper === "+") {
             c[index].quantity++;
-        } else {
-            if (c[index].quantity > 0) {
-                c[index].quantity--;
-            }
+        } else if (c[index].quantity > 0) {
+            c[index].quantity--;
         }
         c[index].total = c[index].quantity * c[index].price;
         setCart(c);
+        ForceReducer();
+    }
+
+    const SetCart = (array) => {
+        setCart(array);
         ForceReducer();
     }
 
@@ -60,7 +63,8 @@ const App = () => {
             </ul>
 
             <AppRouter addToCart={AddToCart} />
-            <Cart cart={cart} reducer={ignored} addMoreItem={ChangeNumOfItems} />
+            <Cart cart={cart} reducer={ignored} addMoreItem={ChangeNumOfItems}
+                changeCart={SetCart} />
         </div>
     )
 }
