@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 const Cart = (props) => {
     const [cartItems, setCartItems] = useState(props.cart);
 
-    //TODO: Remove item from Cart When quantity is 0.
     //TODO: SIDEBAR for Cart.
     //TODO: ON chekout reset all value and show processing Screen.
     //TODO: Show total price of the purchase.

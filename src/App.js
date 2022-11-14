@@ -54,6 +54,10 @@ const App = () => {
         ForceReducer();
     }
 
+    const showCart = () => {
+        setDisplayCart(!displayCart);
+    }
+
     return (
         <div className="container">
 
@@ -61,10 +65,16 @@ const App = () => {
                 <li><a href="/">Home</a></li>
                 <li><a href="/items">Items</a></li>
             </ul>
+            <button className="btn btn-secondary"
+                onClick={showCart}>Cart</button>
 
             <AppRouter addToCart={AddToCart} />
-            <Cart cart={cart} reducer={ignored} addMoreItem={ChangeNumOfItems}
-                changeCart={SetCart} />
+            {
+                displayCart && (
+                    <Cart cart={cart} reducer={ignored} addMoreItem={ChangeNumOfItems}
+                        changeCart={SetCart} />
+                )
+            }
         </div>
     )
 }
