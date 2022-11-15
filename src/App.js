@@ -2,12 +2,14 @@ import React, { useState, useEffect, useReducer } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AppRouter from "./components/AppRouter";
 import Cart from "./components/Cart";
+import OrderComplete from "./components/OrderComplete";
 
 const App = () => {
 
     const [displayCart, setDisplayCart] = useState(() => false);
     const [cart, setCart] = useState([]);
     const [ignored, ForceReducer] = useReducer(x => x + 1, 0);
+    const [order, setOrder] = useState(false);
 
     const SearchItem = (nameKey, array) => {
         let ans = -1;
@@ -18,6 +20,15 @@ const App = () => {
             }
         });
         return ans;
+    }
+
+    const checkout = () => {
+        setCart([]);
+        setDisplayCart(false);
+        setOrder(true);
+        setTimeout(() => {
+            setOrder(false);
+        }, 3000);
     }
 
     const AddToCart = (product) => {
@@ -72,7 +83,13 @@ const App = () => {
             {
                 displayCart && (
                     <Cart cart={cart} reducer={ignored} addMoreItem={ChangeNumOfItems}
-                        changeCart={SetCart} close={showCart} />
+                        changeCart={SetCart} close={showCart}
+                        checkout={checkout} />
+                )
+            }
+            {
+                order && (
+                    <OrderComplete />
                 )
             }
         </div>

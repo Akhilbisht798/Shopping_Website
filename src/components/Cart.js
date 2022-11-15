@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import OrderComplete from "./OrderComplete";
 import "../style/cart.css"
 
 const Cart = (props) => {
@@ -42,6 +43,9 @@ const Cart = (props) => {
                         <button onClick={handleClick} value="-">-</button>
                     </div>
                 ))}
+                <div>
+                    <button onClick={props.checkout} className="btn btn-primary">Checkout</button>
+                </div>
             </div>
         </div>
     );
