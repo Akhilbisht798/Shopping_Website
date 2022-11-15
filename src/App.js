@@ -10,6 +10,7 @@ const App = () => {
     const [cart, setCart] = useState([]);
     const [ignored, ForceReducer] = useReducer(x => x + 1, 0);
     const [order, setOrder] = useState(false);
+    const [total, setTotal] = useState(0);
 
     const SearchItem = (nameKey, array) => {
         let ans = -1;
@@ -26,6 +27,7 @@ const App = () => {
         setCart([]);
         setDisplayCart(false);
         setOrder(true);
+        setTotal(0);
         setTimeout(() => {
             setOrder(false);
         }, 3000);
@@ -69,6 +71,11 @@ const App = () => {
         setDisplayCart(!displayCart);
     }
 
+    useEffect(() => {
+        const ans = cart.reduce((acc, curr) => acc + curr.total, 0);
+        setTotal(ans);
+    }, [ignored])
+
     return (
         <div className="container">
 
@@ -84,7 +91,7 @@ const App = () => {
                 displayCart && (
                     <Cart cart={cart} reducer={ignored} addMoreItem={ChangeNumOfItems}
                         changeCart={SetCart} close={showCart}
-                        checkout={checkout} />
+                        checkout={checkout} total={total} />
                 )
             }
             {

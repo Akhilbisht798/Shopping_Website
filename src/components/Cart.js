@@ -5,10 +5,7 @@ import "../style/cart.css"
 const Cart = (props) => {
     const [cartItems, setCartItems] = useState(props.cart);
 
-    //TODO: ON chekout reset all value and show processing Screen.
     //TODO: Show total price of the purchase.
-
-    //ALL Changes Should be made on cart prop that is state of App.
 
     const RemoveElement = (e) => {
         let index = e.target.parentNode.dataset.index;
@@ -45,6 +42,9 @@ const Cart = (props) => {
                 ))}
                 <div>
                     <button onClick={props.checkout} className="btn btn-primary">Checkout</button>
+                </div>
+                <div>
+                    {props.total}
                 </div>
             </div>
         </div>
