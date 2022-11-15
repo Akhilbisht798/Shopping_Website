@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.02afed35.css",
-    "main.js": "/static/js/main.650d9a4c.js",
-    "index.html": "/index.html",
-    "static/media/wave-haikei.svg": "/static/media/wave-haikei.0881acc2158e9458fd96.svg",
-    "main.02afed35.css.map": "/static/css/main.02afed35.css.map",
-    "main.650d9a4c.js.map": "/static/js/main.650d9a4c.js.map"
+    "main.css": "/Shopping_Website/static/css/main.f769185a.css",
+    "main.js": "/Shopping_Website/static/js/main.650d9a4c.js",
+    "index.html": "/Shopping_Website/index.html",
+    "static/media/wave-haikei.svg": "/Shopping_Website/static/media/wave-haikei.0881acc2158e9458fd96.svg",
+    "main.f769185a.css.map": "/Shopping_Website/static/css/main.f769185a.css.map",
+    "main.650d9a4c.js.map": "/Shopping_Website/static/js/main.650d9a4c.js.map"
   },
   "entrypoints": [
-    "static/css/main.02afed35.css",
+    "static/css/main.f769185a.css",
     "static/js/main.650d9a4c.js"
   ]
 }
