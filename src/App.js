@@ -72,7 +72,7 @@ const App = () => {
             {
                 displayCart && (
                     <Cart cart={cart} reducer={ignored} addMoreItem={ChangeNumOfItems}
-                        changeCart={SetCart} />
+                        changeCart={SetCart} close={showCart} />
                 )
             }
         </div>
