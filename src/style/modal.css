@@ -20,7 +20,6 @@
     background-color: white;
     width: 80%;
     height: 60%;
-
 }
 
 .modal-head {
@@ -35,6 +34,7 @@
     justify-content: space-around;
     align-items: center;
     gap: 1.3rem;
+    color: black;
 }
 
 .close {
@@ -48,4 +48,10 @@
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+h3,
+p,
+hr {
+    color: black;
 }

@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useReducer } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AppRouter from "./components/AppRouter";
 import Cart from "./components/Cart";
 import OrderComplete from "./components/OrderComplete";
+import "./style/App.css"
+import { AiOutlineShoppingCart } from "react-icons/ai";
 
 const App = () => {
 
@@ -77,14 +78,21 @@ const App = () => {
     }, [ignored])
 
     return (
-        <div className="container">
+        <div>
 
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/items">Items</a></li>
-            </ul>
-            <button className="btn btn-secondary"
-                onClick={showCart}>Cart</button>
+            <div className="header">
+                <div id="header-divs1">
+                    <h2>PokeMart</h2>
+                </div>
+                <div id="header-divs2">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/items">Items</a></li>
+                </div>
+                <div id="header-divs3">
+                    <button className="cart-btn"
+                        onClick={showCart}><AiOutlineShoppingCart size="2rem" /></button>
+                </div>
+            </div>
 
             <AppRouter addToCart={AddToCart} />
             {

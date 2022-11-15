@@ -1,3 +1,17 @@
 .items-img {
     width: 4.25rem;
 }
+
+.items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+}
+
+.items-inside {
+    display: grid;
+    padding: 2em;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10em;
+}

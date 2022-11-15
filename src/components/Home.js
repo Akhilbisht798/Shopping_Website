@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from "react";
+import "../style/Home.css"
 
 const Home = () => {
     return (
-        <div>
-            This is Home.
-            Home page basic design.
+        <div className="Home">
+            <div>
+                Welcome To the Largest Pokemon Store.
+            </div>
+            <div>
+                Shop Now.
+            </div>
         </div>
     )
 }

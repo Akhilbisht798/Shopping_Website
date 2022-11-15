@@ -24,17 +24,19 @@ const Items = (props) => {
     }
 
     return (
-        <div className="container">
-            {product.map((curr, index) => {
-                return (
-                    <div key={index} data-index={index}>
-                        <img src={curr.img} className="items-img" />
-                        <h2>{curr.item}</h2>
-                        <button className="btn btn-primary"
-                            onClick={changeModal}>Buy Now</button>
-                    </div>
-                )
-            })}
+        <div className="items">
+            <div className="items-inside">
+                {product.map((curr, index) => {
+                    return (
+                        <div key={index} data-index={index} className="items-indi">
+                            <img src={curr.img} className="items-img" />
+                            <h2>{curr.item}</h2>
+                            <button className="btn btn-primary"
+                                onClick={changeModal}>Buy Now</button>
+                        </div>
+                    )
+                })}
+            </div>
             {
                 isModal && (
                     <Modal close={changeModal} product={selectedItem} addToCart={props.addToCart} />

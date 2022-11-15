@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: var(--popins);
+}
+
+:root {
+    --popins: 'Poppins', sans-serif;
+}
+
+html,
+body {
+    width: 100vw;
+    min-width: 100vh;
+    background: url("../assests/img/wave-haikei.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1.5em;
+    font-size: 1.2rem;
+}
+
+#header-divs1 {
+    display: flex;
+    align-items: center;
+}
+
+#header-divs3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#header-divs2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header>div>li {
+    list-style: none;
+    text-decoration: none;
+}
+
+.header>div>li>a {
+    text-decoration: none;
+    color: white;
+}
+
+.cart-btn {
+    background: none;
+    border: none;
+}

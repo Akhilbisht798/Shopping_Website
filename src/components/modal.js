@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../style/modal.css"
+import { motion } from "framer-motion"
 
 const Modal = (props) => {
 
@@ -11,7 +12,8 @@ const Modal = (props) => {
     }
 
     return (
-        <div id="Shop-M">
+        <motion.div animate={{ x: 0 }} initial={{ x: 300 }}
+            id="Shop-M">
             <div className="Modal-content">
                 <div className="modal-head">
                     <h3>{props.product.item}</h3>
@@ -33,7 +35,7 @@ const Modal = (props) => {
 
                 </div>
             </div>
-        </div >
+        </motion.div >
     )
 }
 
